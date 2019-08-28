@@ -164,11 +164,14 @@
         // 添加文章功能 
         $('#pAdd').on('click', function() {
             var formData = $('form').serialize();
+            // console.log(formData);
+            // return;
             $.ajax({
                 type: 'post',
                 url: '/posts',
                 data: formData,
                 success: function(res) {
+                    console.log(11);
                     location.href = 'posts.html';
                 }
             });
